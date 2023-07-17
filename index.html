@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="crudstyle.css" />
+  </head>
+  <body>
+    <div class="row1">
+      <fieldset>
+        <h2>RegisterForm- CRUD Operation</h2>
+        <form
+          action=""
+          onsubmit="return validateForm(event);  e.preventDefault();"
+          id="form"
+        >
+          <label for="userid">UserID:</label><br />
+          <input
+            type="text"
+            placeholder="User id"
+            name="userid"
+            id="userid"
+            autocomplete="off" autofocus
+            onkeyup = "validateUserId()"
+          /><br />
+          <p id="iderror" class="error" ></p>
+          <label for="username">Name:</label><br />
+          <input
+            type="text"
+            placeholder="User Name"
+            name="username"
+            id="username"
+            autocomplete="off" autofocus
+            onkeyup="validateUsername()"
+          /><br />
+          <p id="usererror" class="error" ></p>
+          <label for="email">Email Address:</label><br />
+          <input
+            type="text"
+            placeholder="example@gmail.com"
+            name="email"
+            id="email"
+            autocomplete="off" autofocus
+            onkeyup="validateEmail()"
+          /><br />
+          <p id="emailerror" class="error" ></p>
+          <label for="password">Create Password:</label><br />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="password"
+            autocomplete="off" autofocus
+            onkeyup="validatePassword()"
+          /><br />
+          <p id="passerror" class="error" ></p>
+          <label for="password2">Confirm Password:</label><br />
+          <input
+            type="password"
+            placeholder="Re-enter Password"
+            name="password2"
+            id="password2"
+            autocomplete="off" autofocus
+            onkeyup="validateConfirmPassword()"
+          /><br />
+          <p id="pass2error" class="error" ></p>
+          <label for="phone">Phone Number:</label><br />
+          <input
+            type="number"
+            placeholder="User Phone Number"
+            name="phone"
+            id="phone"
+            autocomplete="off" autofocus
+            onkeyup="validatePhone()"
+          /><br />
+          <p id="pherror" class="error" ></p>
+          <label for="address">Address:</label><br />
+          <input
+            type="text"
+            placeholder="User Address"
+            name="address"
+            id="address"
+            autocomplete="off" autofocus
+            onkeyup="validateAddress()"
+          /><br />
+          <p id="adderror" class="error" ></p>
+          <label for="country">Country:</label>
+          <select id="country"  autocomplete="off" onchange="validateCountry()"  >
+            <option name="country" selected="" value="Default" disabled selected >
+              (Please select a country)
+            </option>
+            
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="india">India</option>
+            <option value="russia">Russia</option>
+            <option value="usa">USA</option>
+          </select>
+          <p id="countryerror" class="error" ></p>
+          <label for="city">City:</label>
+          <select  id="city" onchange="validateCity()">
+          </select>
+          <p id="cityerror" class="error" ></p>
+          <br />
+          
+
+          <label for="zip">ZIP Code:</label><br />
+          <input
+            type="number"
+            placeholder="User ZIP Code"
+            name="zip"
+            id="zip"
+            autocomplete="off" autofocus
+            onkeyup="validateZip()"
+          /><br />
+          <p id="ziperror" class="error" ></p>
+          <label for="imageUpload">Profile Picture:</label><br />
+          <input
+            type="file"
+            id="imageUpload"
+            name="imageUpload"
+            accept="image/*"
+            onchange="previewImage()" 
+            onkeyup="validateImage()"
+          />
+          <div id="imagePreview"></div>
+          <button type="submit" value="Submit">Submit</button>
+        </form>
+      </fieldset>
+    </div>
+    <div class="row2">
+      <div>
+        <table border="2" id="table">
+          <thead id="table-head"></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="crud.js"></script>
+  </body>
+</html>

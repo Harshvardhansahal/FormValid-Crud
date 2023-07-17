@@ -1,0 +1,84 @@
+body{
+    background-color: aqua;
+    height: 238vh;
+
+}
+.row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 238vh;
+}
+.row2{
+    margin-top: -180px;
+}
+
+h2{
+    margin: 7px 0px 4px 0px;
+}
+input{
+    width: 200px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+button[type="submit"] {
+    width: 220px;
+    height: 33px;
+    background-color: aqua;
+    border: 0px;
+    color: black;
+}
+select{
+    width: 222px;
+    margin: 29px 0px;
+    padding: 10px;
+    margin-bottom: 14px;
+}
+form label {
+    display: block;
+    margin-bottom: -23px;
+    width: 90%;
+    text-align: left;
+    text-transform: capitalize;
+  }
+.error{
+    color: red;
+    text-align: left;
+    margin: 0px;
+    margin-top: -8px;
+    margin-bottom: 5px;
+    font-size: small;
+}  
+p {
+    display: block;
+    margin-block-start: -1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 98px;
+    color: red;
+}
+table{
+    border-color: white;
+}
+td{
+    padding: 8px 16px;
+}
+.col{
+    font-weight: bold;
+    font-size: 18px;
+    background-color: palevioletred;
+}
+tr{
+    background-color: pink;
+    color: black;
+    text-align: center;
+}
+fieldset{
+    display: inline;
+    background-color: aliceblue;
+    /* margin-top: -298px; */
+}
+button{
+    margin: 1px;
+}
